@@ -15,7 +15,8 @@ function App() {
             <div className="front">front</div>
           }
         </div>
-        <button className="btn"></button>
+        <button className="btn">prev</button>
+        <button className="btn">next</button>
       </div>
     </>
   )
