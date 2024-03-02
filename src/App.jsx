@@ -6,8 +6,9 @@ function App() {
 
   return (
     <>
-      <div className="title"></div>
-      <div className="description"></div>
+      <div className="title">title</div>
+      <div className="description">description</div>
+      <div className="num">num</div>
       <div className="container">
         <div className="card" onClick={()=>setFlip(!flip)}>
           {
