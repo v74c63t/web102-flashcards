@@ -1,6 +1,6 @@
-# Web Development Project 2 - _Name of App Here_
+# Web Development Project 2 - _Flashcards_
 
-Submitted by: **Your Name Here**
+Submitted by: **Vanessa Tang**
 
 This web app: **insert description**
 
@@ -47,7 +47,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [Vanessa Tang]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
