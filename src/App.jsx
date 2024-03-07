@@ -1,9 +1,11 @@
 
 import './App.css'
 import Card from './Components/Card/Card'
-import cards from './data/data.json'
+import data from './data/data.json'
 
 function App() {
+
+  const cards = data.cards
 
   return (
     <>
