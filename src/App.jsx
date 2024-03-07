@@ -1,6 +1,7 @@
 
 import './App.css'
 import Card from './Components/Card/Card'
+import cards from './data/data.json'
 
 function App() {
 
@@ -10,7 +11,11 @@ function App() {
       <div className="description">description</div>
       <div className="num">num</div>
       <div className="container">
-        <Card />
+        {cards.map((card, i) => {
+          return (
+            <Card key={i} question={card.question} answer={card.answer} />
+          )
+        })}
       </div>
     </>
   )
