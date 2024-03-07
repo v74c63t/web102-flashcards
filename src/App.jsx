@@ -1,8 +1,8 @@
-import { useState } from 'react'
+
 import './App.css'
+import Card from './Components/Card/Card'
 
 function App() {
-  const [flip, setFlip] = useState(false)
 
   return (
     <>
@@ -10,14 +10,7 @@ function App() {
       <div className="description">description</div>
       <div className="num">num</div>
       <div className="container">
-        <div className="card" onClick={()=>setFlip(!flip)}>
-          {
-            flip ? <div className="back">back</div> :
-            <div className="front">front</div>
-          }
-        </div>
-        <button className="btn">prev</button>
-        <button className="btn">next</button>
+        <Card />
       </div>
     </>
   )
