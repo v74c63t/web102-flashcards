@@ -1,11 +1,12 @@
 
 import './App.css'
-import Card from './Components/Card/Card'
+import Deck from './Components/Deck/Deck'
 import data from './data/data.json'
 
 function App() {
 
   const cards = data.cards
+  console.log(cards)
 
   return (
     <>
@@ -13,11 +14,7 @@ function App() {
       <div className="description">description</div>
       <div className="num">num</div>
       <div className="container">
-        {cards.map((card, i) => {
-          return (
-            <Card key={i} question={card.question} answer={card.answer} />
-          )
-        })}
+        <Deck cards={cards} />
       </div>
     </>
   )
