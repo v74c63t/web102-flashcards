@@ -7,3 +7,15 @@
   margin: 1rem;
   cursor: pointer;
 }
+
+.easy {
+  background-color: lightgreen;
+}
+
+.medium {
+  background-color: rgb(251, 251, 112);
+}
+
+.hard {
+  background-color: lightcoral;
+}

@@ -5,7 +5,7 @@ const Card = ({card}) => {
   const [flip, setFlip] = useState(false)
 
   return(
-    <div className="card" onClick={()=>setFlip(!flip)}>
+    <div className={`card ${card.difficulty}`} onClick={()=>setFlip(!flip)}>
       {
         flip ? <div className="back">{card.answer}</div> :
         <div className="front">{card.question}</div>
