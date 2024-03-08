@@ -1,4 +1,9 @@
 .card {
   background-color: beige;
   color: black;
+  height: 18rem;
+  width: 36rem;
+  padding: 2rem;
+  margin: 1rem;
+  cursor: pointer;
 }
