@@ -25,6 +25,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 -   [x] Cards contain embedded videos
+-   [x] A previous button
 
 ## Video Walkthrough
 
