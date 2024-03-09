@@ -2,39 +2,39 @@
 
 Submitted by: **Vanessa Tang**
 
-This web app: **insert description**
+This web app: **contains flashcard with questions about the Virtual YouTuber, Hoshimachi Suisei. The user can click on the next button to move onto the next question as well as the previous button to go back to a question (the previous button is disabled on the first card). When the user reaches the end of the deck, a restart button appears that restarts everything and shuffles the cards so they will appear in a different randomized order.**
 
-Time spent: **X** hours spent in total so far 1-2 hrs
+Time spent: **X** hours spent in total so far 3-4 hrs
 
 ## Required Features
 
 The following **required** functionality is completed:
 
--   [ ] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
--   [ ] **A single card at a time is displayed, only showing one of the components of the information pair**
--   [ ] **A list of card pairs is created**
--   [ ] **Clicking on the card shows the corresponding component of the information pair**
--   [ ] **Clicking the next button displays a random new card**
+-   [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
+-   [x] **A single card at a time is displayed, only showing one of the components of the information pair**
+-   [x] **A list of card pairs is created**
+-   [x] **Clicking on the card shows the corresponding component of the information pair**
+-   [x] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
 
--   [ ] Cards contains images in addition to or in place of text
--   [ ] Cards have different visual styles such as color based on their category
-    -   [ ] _visual style implemented_
+-   [x] Cards contain images in addition to or in place of text
+-   [x] Cards have different visual styles such as color based on their category
+    -   [x] _Difficulty: Easy (Green), Medium (Yellow), Hard (Red)_
 
 The following **additional** features are implemented:
 
--   [ ] List anything else that you added to improve the site's functionality!
+-   [x] Cards contain embedded videos
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with [Kap](https://getkap.co/)
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
