@@ -12,7 +12,7 @@ const Deck = ({cards}) => {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
-}
+  }
 
   const handleNext = () => {
     if(selectedCard == cards.length - 1) {
