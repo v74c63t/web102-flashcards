@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-      <div className="title">title</div>
-      <div className="description">description</div>
+      <div className="title">Hoshimachi Suisei Quiz</div>
+      <div className="description">This is a general knowledge quiz about the Virtual YouTuber, Hoshimachi Suisei</div>
       <div className="num">Number of Cards: {cards.length}</div>
       <div className="container">
         <Deck cards={cards} />
