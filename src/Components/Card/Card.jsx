@@ -1,8 +1,7 @@
 import './Card.css'
 import { useState } from 'react'
 
-const Card = ({card}) => {
-  const [flip, setFlip] = useState(false)
+const Card = ({card, flip, setFlip}) => {
 
   return(
     <div className={`card ${card.difficulty}`} onClick={()=>setFlip(!flip)}>
