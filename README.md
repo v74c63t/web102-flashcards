@@ -4,7 +4,7 @@ Submitted by: **Vanessa Tang**
 
 This web app: **contains flashcard with questions about the Virtual YouTuber, Hoshimachi Suisei. The user can click on the next button to move onto the next question as well as the previous button to go back to a question (the previous button is disabled on the first card). When the user reaches the end of the deck, a restart button appears that restarts everything and shuffles the cards so they will appear in a different randomized order.**
 
-Time spent: **X** hours spent in total so far 3-4 hrs
+Time spent: **4** hours spent in total
 
 ## Required Features
 
@@ -44,6 +44,8 @@ GIF created with [Kap](https://getkap.co/)
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+I had some problems with embedding the video on the card, but it ended up being a relatively simple fix so I was able to get it to work.
 
 ## License
 
