@@ -6,9 +6,18 @@ const Deck = ({cards}) => {
   const [selectedCard, setSelectedCard] = useState(0)
   const [flip, setFlip] = useState(false)
 
+  /* Durstenfeld shuffle algorithm */
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
   const handleNext = () => {
     if(selectedCard == cards.length - 1) {
       setSelectedCard(0)
+      shuffle(cards)
     }
     else {
       setSelectedCard(selectedCard + 1)
