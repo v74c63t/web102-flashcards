@@ -6,6 +6,10 @@
   padding: 2rem;
   margin: 1rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .easy {
@@ -18,4 +22,8 @@
 
 .hard {
   background-color: lightcoral;
+}
+
+.front, .back {
+  font-size: 2.2rem;
 }

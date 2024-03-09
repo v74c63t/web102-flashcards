@@ -7,12 +7,15 @@
 
 .title {
   font-size: 2.4rem;
+  font-weight: bolder;
 }
 
 .description {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .num {
   font-size: 1rem;
+  font-style: italic;
 }
