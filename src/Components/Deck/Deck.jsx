@@ -43,7 +43,6 @@ const Deck = ({cards}) => {
     else {
       const fuse = new Fuse([cards[selectedCard].answer], {includeScore: true, isCaseSensitive: false, shouldSort: true})
       const result = fuse.search(guess)
-      console.log(result)
       if(result.length == 0) {
         setCorrect(false)
         if(streak > longest) {
@@ -51,8 +50,9 @@ const Deck = ({cards}) => {
         }
         setStreak(0)
       }
-      else if(result[0].score < 0.3) {
+      else if(result[0].score < 0.4) {
         setCorrect(true)
+        setStreak(streak + 1)
       }
       else {
         setCorrect(false)
