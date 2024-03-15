@@ -6,8 +6,7 @@ const Card = ({card, flip, setFlip}) => {
     <div className={`card ${card.difficulty}`} onClick={()=>setFlip(!flip)}>
       {
         flip ? <div className="back">
-                {card.answer}
-                {card.answerImage != undefined ? <div> <img width={250} height={"auto"} src={card.answerImage} alt='answer image' /> </div> : ""}
+                {card.answerImage != undefined ? <div> <img width={250} height={"auto"} src={card.answerImage} alt='answer image' /> </div> : card.answer}
                 {card.video != undefined ? (
                   <div> 
                     <iframe width="320" height="240"
