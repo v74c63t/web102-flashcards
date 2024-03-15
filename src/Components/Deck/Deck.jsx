@@ -9,13 +9,21 @@ const Deck = ({cards}) => {
   const [guess, setGuess] = useState('')
   const [correct, setCorrect] = useState(null)
 
+  const [streak, setStreak] = useState(0)
+  const[longest, setLongest] = useState(0)
+
   const handleSubmit = () => {
     event.preventDefault()
     if(guess.toLowerCase() === cards[selectedCard].answer.toLowerCase()) {
       setCorrect(true)
+      setStreak(streak + 1)
     }
     else {
       setCorrect(false)
+      if(streak > longest) {
+        setLongest(streak)
+      }
+      setStreak(0)
     }
   }
 
@@ -47,6 +55,10 @@ const Deck = ({cards}) => {
 
   return(
     <div>
+      <div className='streak'>
+        <h4>Streak: {streak}</h4>
+        <h4>Longest Streak: {longest}</h4>
+      </div>
       <Card card={cards[selectedCard]} flip={flip} setFlip={setFlip} />
       <div>
         <strong>Guess the answer: </strong>
