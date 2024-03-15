@@ -62,7 +62,7 @@ const Deck = ({cards}) => {
       <Card card={cards[selectedCard]} flip={flip} setFlip={setFlip} />
       <div>
         <strong>Guess the answer: </strong>
-        <input type='text' className={correct ? 'correct' :  correct === false ? 'wrong' : ''} placeholder='Place your guess here' onChange={(event) => setGuess(event.target.value)} />
+        <input type='text' className={correct ? 'correct' :  correct === false ? 'wrong' : ''} placeholder='Place your guess here' onChange={(event) => setGuess(event.target.value)}  value={guess}/>
         {!flip ? <button className="btn" type='submit' onClick={handleSubmit}>Guess</button> : <button className="btn disabled" type='submit' disabled>Guess</button>}
       </div>
       <br />
