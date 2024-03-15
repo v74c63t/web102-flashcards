@@ -6,3 +6,18 @@
 .disabled {
   pointer-events: none;
 }
+
+.streak {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.correct {
+  border: solid 0.2rem green;
+}
+
+.wrong {
+  border: solid 0.2rem red;
+}
