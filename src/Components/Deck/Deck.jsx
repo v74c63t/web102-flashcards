@@ -1,6 +1,7 @@
 import './Deck.css'
 import Card from '../Card/Card'
 import { useState } from 'react'
+import Fuse from 'fuse.js'
 
 const Deck = ({cards}) => {
   const [selectedCard, setSelectedCard] = useState(0)
@@ -14,16 +15,52 @@ const Deck = ({cards}) => {
 
   const handleSubmit = () => {
     event.preventDefault()
-    if(guess.toLowerCase() === cards[selectedCard].answer.toLowerCase()) {
-      setCorrect(true)
-      setStreak(streak + 1)
+
+    if(!isNaN(Date.parse(cards[selectedCard].answer))) {
+      if(isNaN(Date.parse(guess))) {
+        setCorrect(false)
+        if(streak > longest) {
+          setLongest(streak)
+        }
+        setStreak(0)
+      }
+      else {
+        const d1 = new Date(guess)
+        const d2 = new Date(cards[selectedCard].answer)
+        if(d1.getDate() === d2.getDate()) {
+          setCorrect(true)
+          setStreak(streak + 1)
+        }
+        else {
+          setCorrect(false)
+          if(streak > longest) {
+            setLongest(streak)
+          }
+          setStreak(0)
+        }
+      }
     }
     else {
-      setCorrect(false)
-      if(streak > longest) {
-        setLongest(streak)
+      const fuse = new Fuse([cards[selectedCard].answer], {includeScore: true, isCaseSensitive: false, shouldSort: true})
+      const result = fuse.search(guess)
+      console.log(result)
+      if(result.length == 0) {
+        setCorrect(false)
+        if(streak > longest) {
+          setLongest(streak)
+        }
+        setStreak(0)
       }
-      setStreak(0)
+      else if(result[0].score < 0.3) {
+        setCorrect(true)
+      }
+      else {
+        setCorrect(false)
+        if(streak > longest) {
+          setLongest(streak)
+        }
+        setStreak(0)
+      }
     }
   }
 
