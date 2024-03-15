@@ -6,6 +6,19 @@ const Deck = ({cards}) => {
   const [selectedCard, setSelectedCard] = useState(0)
   const [flip, setFlip] = useState(false)
 
+  const [guess, setGuess] = useState('')
+  const [correct, setCorrect] = useState(null)
+
+  const handleSubmit = () => {
+    event.preventDefault()
+    if(guess.toLowerCase() === cards[selectedCard].answer.toLowerCase()) {
+      setCorrect(true)
+    }
+    else {
+      setCorrect(false)
+    }
+  }
+
   /* Durstenfeld shuffle algorithm */
   function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -15,14 +28,10 @@ const Deck = ({cards}) => {
   }
 
   const handleNext = () => {
-    if(selectedCard == cards.length - 1) {
-      setSelectedCard(0)
-      shuffle(cards)
-    }
-    else {
-      setSelectedCard(selectedCard + 1)
-    }
+    setSelectedCard(selectedCard + 1)
     setFlip(false)
+    setGuess('')
+    setCorrect(null)
   }
 
   const handlePrev = () => {
@@ -30,11 +39,24 @@ const Deck = ({cards}) => {
     setFlip(false)
   }
 
+  const handleShuffle = () => {
+    setSelectedCard(0)
+    shuffle(cards)
+    setFlip(false)
+  }
+
   return(
     <div>
       <Card card={cards[selectedCard]} flip={flip} setFlip={setFlip} />
+      <div>
+        <strong>Guess the answer: </strong>
+        <input type='text' className={correct ? 'correct' :  correct === false ? 'wrong' : ''} placeholder='Place your guess here' onChange={(event) => setGuess(event.target.value)} />
+        {!flip ? <button className="btn" type='submit' onClick={handleSubmit}>Guess</button> : <button className="btn disabled" type='submit' disabled>Guess</button>}
+      </div>
+      <br />
       {selectedCard != 0 ? <button className="btn" onClick={handlePrev}>Prev</button> : <button className="btn disabled" disabled>Prev</button>}
-      {selectedCard != cards.length - 1 ? <button className="btn" onClick={handleNext}>Next</button> : <button className="btn" onClick={handleNext}>Restart</button>}
+      <button className='btn' onClick={handleShuffle}>Shuffle</button>
+      {selectedCard != cards.length - 1 ? <button className="btn" onClick={handleNext}>Next</button> : <button className="btn disabled" disabled>Next</button>}
     </div>
   )
 }
