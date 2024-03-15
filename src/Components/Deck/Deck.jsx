@@ -88,6 +88,8 @@ const Deck = ({cards}) => {
     setSelectedCard(0)
     shuffle(cards)
     setFlip(false)
+    setGuess('')
+    setCorrect(null)
   }
 
   return(
