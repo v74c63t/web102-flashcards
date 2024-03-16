@@ -4,7 +4,7 @@ Submitted by: **Vanessa Tang**
 
 This web app: **contains flashcard with questions about the Virtual YouTuber, Hoshimachi Suisei. The user can click on the next button to move onto the next question as well as the previous button to go back to a question (the previous button is disabled on the first card and the next button is disabled on the last card). There is also a shuffle button to shuffle the deck at any time. Users can make a guess on the answer for the card and a visual cue will show them if the answer is correct or not. An answer may be marked as correct even if it is slightly off.**
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
@@ -45,7 +45,7 @@ GIF created with [Kap](https://getkap.co/)
 
 Describe any challenges encountered while building the app.
 
-The main issue I ran into is getting fuse.js to work with answers that involve dates. Sometimes, it scores the incorrect dates too well and marks it correct when it should not be. In the end, I just decided to check the dates in a different way using date objects, so if someone enters the date in a different format, it will still be marked as correct if the date is the same.
+The main issue I ran into is getting fuse.js to work with answers that involve dates. Sometimes, it scores the incorrect dates too well and marks it correct when it should not be. In the end, I just decided to check the dates in a different way using date objects, so if someone enters the date in a different format, it will still be marked as correct if the date is the same. Other than that, I did not really struggle since I basically completed half of the required functionalities without knowing during the previous part so I only had to add little to this part.
 
 ## License
 
